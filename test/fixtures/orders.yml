@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  monto_total: MyString
+  fecha_orden: 2023-07-10 09:31:38
+  product: one
+  client: one
+  payment: one
+
+two:
+  monto_total: MyString
+  fecha_orden: 2023-07-10 09:31:38
+  product: two
+  client: two
+  payment: two

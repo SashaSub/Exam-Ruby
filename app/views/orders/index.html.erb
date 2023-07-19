@@ -1,0 +1,15 @@
+<h1>Orders</h1>
+
+<div id="orders">
+  <% @orders.each do |order| %>
+
+  <% if current_user.id == order.client_id || current_user.role == "admin" %>
+    <%= render order %>
+    <p>
+      <%= link_to "Show this order", order %>
+    </p>
+     <% end %>
+  <% end %>
+</div>
+
+<%= link_to "New order", new_order_path %>

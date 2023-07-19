@@ -1,0 +1,28 @@
+<div id="<%= dom_id order %>">
+
+  <p>
+    <strong>Monto total:</strong>
+    <%= order.monto_total %>
+  </p>
+
+  <p>
+    <strong>Fecha orden:</strong>
+    <%= order.fecha_orden %>
+  </p>
+
+  <p>
+    <strong>Product:</strong>
+    <%= order.product.nombre %>
+  </p>
+
+  <p>
+    <strong>Client:</strong>
+    <%= order.client.nombre %>
+  </p>
+
+  <p>
+    <strong>Payment:</strong>
+    <%= order.payment.nombre %>
+  </p>
+
+</div>

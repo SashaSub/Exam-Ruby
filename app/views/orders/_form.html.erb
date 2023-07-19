@@ -1,0 +1,42 @@
+<%= form_with(model: order) do |form| %>
+  <% if order.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :monto_total, style: "display: block" %>
+    <%= form.text_field :monto_total %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_orden, style: "display: block" %>
+    <%= form.datetime_field :fecha_orden %>
+  </div>
+
+  <div class="my-3">   
+    <%= form.select :product_id, options_for_select(@products),
+    {include_blank: "Producto"},{required: true, style: "display: block" } %> 
+  </div>
+
+  <div>
+    <%#= form.label :client_id, style: "display: block" %>
+    <%#= form.text_field :client_id %>
+  </div>
+
+  <div class="my-3">    
+    <%= form.select :payment_id, options_for_select(@payments),
+    {include_blank: "Tipo de Pago"},{required: true, style: "display: block" } %>    
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
