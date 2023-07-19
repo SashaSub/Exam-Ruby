@@ -14,7 +14,7 @@ require 'faker'
     User.create!(email:"user1@gmail.com", password:"123456", name:"User 1")
     User.create!(email:"user2@gmail.com", password:"123456", name:"User 2")
     User.create!(email:"user3@gmail.com", password:"123456", name:"User 3")
-    User.create!(email:"user3@gmail.com", password:"123456", name:"User 4")
+    User.create!(email:"user4@gmail.com", password:"123456", name:"User 4")
 
     20.times do
     Product.create!([

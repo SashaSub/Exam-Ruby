@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: %i[ show edit update destroy ]
-  before_action :set_types, only: [:new, :edit, :show, :create]
+  before_action :set_types, only: [:new, :edit, :show, :create] 
 
   before_action :authenticate_user! #, except: [:index, :show]
   # before_action only: [:edit, :update, :destroy] do
@@ -31,7 +31,7 @@ class ClientsController < ApplicationController
 
   # POST /clients or /clients.json
   def create
-    @client = Client.new(client_params)
+    @client = Client.new(client_params)    
 
     respond_to do |format|
       if @client.save
@@ -72,7 +72,7 @@ class ClientsController < ApplicationController
     def set_client
       @client = Client.find(params[:id])
     end
-
+   
     def set_types
       @types = Type.all.map{ |t| [t.nombre, t.id] }
     end
